@@ -1,0 +1,234 @@
+/* ====== STYLES GENERAL ====== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --color-black: rgb(0, 0, 0);
+    --color-white: rgb(255, 255, 255);
+    --color-red-gentle: rgb(243, 101, 101);
+    --color-white-grey: rgb(231, 231, 231);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #ff0844 0%, #ffb199 50%, #f6f3ff);
+    font-family: 'Lexend', sans-serif;
+}
+
+/* ====== CARD CONTAINER (BLOCK) ====== */
+
+.card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 8em;
+}
+
+.card__container {
+    height: 500px;
+    width: 350px;
+    background-color: var(--color-white-grey);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px var(--color-red-gentle);
+    transition: all 0.2s ease-in;
+}
+
+.card__container:hover {
+    box-shadow: 20px 20px 0 0 var(--color-red-gentle);
+    transition: all 0.3s ease-in-out;
+}
+
+.card__container::before {
+    width: 500px;
+    height: 500px;
+}
+
+/* ====== CARD STYLES (ELEMENTS) ====== */
+
+.card__img {
+    width: 100%;
+}
+
+.card__container-circle {
+    height: -40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.card__circle-img {
+    height: 120px;
+    width: 120px;
+    border: 4px solid var(--color-white-grey);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3em;
+}
+
+/* ====== TITLE CONTAINER (BLOCK) ====== */
+
+.title {
+    height: 160px;
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ====== TITLE STYLES (ELEMENTS) ====== */
+
+.title__container-info {
+    text-align: center;
+}
+
+.title__work {
+    width: 50%;
+    display: inline-block;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 100px;
+}
+
+.title__work:hover {
+    transition: 0.5s;
+    background-color: var(--color-red-gentle);
+}
+
+.title__lorem {
+    margin: 15px 10px 0 10px;
+}
+
+.title__adresse-card {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 6px;
+    align-items: center;
+}
+
+.title__adresse {
+    font-size: 11px;
+    font-weight: 200;
+}
+
+/* ====== BUTTON CONTAINER (BLOCK) ====== */
+
+.btn__container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* ====== BUTTON STYLES (ELEMENTS) ====== */
+
+.btn__hire-me {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 34px;
+    width: 115px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 100px;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn__hire-me:hover {
+    cursor: pointer;
+    background-color: var(--color-red-gentle);
+    transition: 0.5s;
+    color: var(--color-black);
+}
+
+hr {
+    width: 80%;
+    height: 6px;
+    background-color: #000;
+    position: absolute;
+    border: none;
+    border-radius: 100px;
+    bottom: 1px;
+}
+
+/* ====== REDES CONTAINER (BLOCK) ====== */
+
+.redes__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 36px;
+}
+
+.redes__cardIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: black;
+    position: relative;
+}
+
+.redes__cardIcon:hover {
+    background-color: var(--color-red-gentle);
+    transition: 0.5s;
+}
+
+.redes__links {
+    text-decoration: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.redes__icons {
+    color: var(--color-white);
+}
+
+.redes__icons:hover {
+    color: var(--color-black);
+}
+
+.right {
+    bottom: 0;
+    right: 1px;
+    position: absolute;
+}
+
+
+/* ====== MEDIA RESPONSIVE DESING ====== */
+
+@media (max-width: 244px) {
+    .title {
+        height: 220px;
+    }
+}
+
+@media (max-width: 307px) {
+    .title {
+        height: 180px;
+    }
+}
+
+@media (max-width: 350px) {
+    .card__container {
+        box-shadow: 0 10px var(--color-red-gentle);
+        transition: all 0.2s ease-in;
+    }
+
+    .card__container:hover {
+        box-shadow: 0 20px 0 0 var(--color-red-gentle);
+        transition: all 0.3s ease-in-out;
+    }
+}
